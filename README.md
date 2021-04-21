@@ -27,16 +27,24 @@
 
 ![https://github.com/TamayoLeivaJ/PUCV_R_Dataviz_2021/blob/main/Image/Sesion_001.png](https://github.com/TamayoLeivaJ/PUCV_R_Dataviz_2021/blob/main/Image/Sesion_001.png) 
 
-## Contenido
+<h3 style="font-weight:normal" align="center">
+&nbsp;Contenido&nbsp;
+</h3>
 
 ![https://github.com/TamayoLeivaJ/PUCV_R_Dataviz_2021/blob/main/Image/Sesion_002.png](https://github.com/TamayoLeivaJ/PUCV_R_Dataviz_2021/blob/main/Image/Sesion_002.png) 
 
-## Contenido
+<h3 style="font-weight:normal" align="center">
+&nbsp;Contenido&nbsp;
+</h3>
 
 ![https://github.com/TamayoLeivaJ/PUCV_R_Dataviz_2021/blob/main/Image/Sesion_003.png](https://github.com/TamayoLeivaJ/PUCV_R_Dataviz_2021/blob/main/Image/Sesion_003.png)
 
-## Contenido
+<h3 style="font-weight:normal" align="center">
+&nbsp;Contenido&nbsp;
+</h3>
 
 ![https://github.com/TamayoLeivaJ/PUCV_R_Dataviz_2021/blob/main/Image/Sesion_004.png](https://github.com/TamayoLeivaJ/PUCV_R_Dataviz_2021/blob/main/Image/Sesion_004.png) 
 
-## Contenido
+<h3 style="font-weight:normal" align="center">
+&nbsp;Contenido&nbsp;
+</h3>

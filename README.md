@@ -10,13 +10,7 @@
 &nbsp;&nbsp;&nbsp;
 <a href="mailto:j.tamayo.leiva@gmail.com"><img height="32" width="32" src="https://github.com/TamayoLeivaJ/TamayoLeivaJ/blob/main/Image/logo/envelope-solid.svg" /></a> 
 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="https://twitter.com/TamayoLeiva_J"><img height="32" width="32" src="https://github.com/TamayoLeivaJ/TamayoLeivaJ/blob/main/Image/logo/twitter.svg" /></a>
-&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="https://www.kaggle.com/jtamayo"><img height="32" width="32" src="https://github.com/TamayoLeivaJ/TamayoLeivaJ/blob/main/Image/logo/kaggle.svg" /></a>
-&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="https://www.linkedin.com/in/javier-ignacio-tamayo-leiva-94613267/"><img height="32" width="32" src="https://github.com/TamayoLeivaJ/TamayoLeivaJ/blob/main/Image/logo/linkedin.svg" /></a> 
-&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="https://loop.frontiersin.org/people/1011798/"><img height="32" width="32" src="https://github.com/TamayoLeivaJ/TamayoLeivaJ/blob/main/Image/logo/loop.svg" /></a>
 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="https://orcid.org/0000-0003-2610-6957"><img height="32" width="32" src="https://github.com/TamayoLeivaJ/TamayoLeivaJ/blob/main/Image/logo/orcid.svg" /></a>
 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 

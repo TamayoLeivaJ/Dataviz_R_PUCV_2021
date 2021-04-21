@@ -1,6 +1,10 @@
 <h1 style="font-weight:normal" align="center">
-&nbsp;Visualización y Análisis en R&nbsp;
+&nbsp;Visualización y Análisis en <img height="32" width="32" src="https://github.com/TamayoLeivaJ/TamayoLeivaJ/blob/main/Image/logo/R.svg" /></a>&nbsp;
 </h1>
+
+<h2 style="font-weight:normal" align="center">
+&nbsp;Talleres de técnicas en visualización y análisis de datos para estádistica <br> Pontificia Universidad Católica de Valparaíso <br> Junio - Agosto 2021 &nbsp;
+</h2>
 
 <div align="center">
 

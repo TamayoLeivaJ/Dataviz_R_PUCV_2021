@@ -31,7 +31,31 @@
 
 <p style="text-align:justify">
 <br>
-En esta primera sesión teórica se abordarán conceptos básicos para el trabajo con el lenguaje de programación R y el uso de una interfaz gráfica de “entorno de desarrollo integrado” o IDE (por sus siglas en inglés “integrated development environment”) RStudio©. En esta sesión teórica, los asistentes también abordaran los conceptos básicos de la estructura de gráficos en capaz que se pueden desarrollar en base al paquete de R “ggplot2”. Los asistentes se iniciarán en los primeros pasos para la elaboración de gráficos en base al mapeo de datos y abordarán conceptos de estética, mapeo por capaz y creación de objetos geométricos (también conocidos como “geoms”) dentro de un gráfico, mientras asimilan conceptos y la lógica en la gramática de ggplot2. La sesión finalizará con técnicas de posicionamiento de gráficos y recomendaciones para el uso de paletas de color, y criterios estéticos para facilitar la correcta visualización de información. <br>
+ <h3 style="font-weight:normal" align="center">
+&nbsp;R & RStudio&nbsp;
+</h3>
+
+- Lenguaje de programación R <br>
+- RStudio (IDE)<br><br>
+
+<h3 style="font-weight:normal" align="center">
+&nbsp;Visualización con ggplot2&nbsp;
+</h3>
+
+- tidyverse<br>
+- paquete ggplot2<br>
+- Gráfico básico<br>
+- Mapeos estéticos<br>
+- Gráficos en capas<br>
+- Objetos geométricos "Geoms"<br>
+- Transformación estadística<br>
+- Otros Ajustes<br>
+
+<h3 style="font-weight:normal" align="center">
+&nbsp;Consideraciones generales&nbsp;
+</h3>
+
+- Color<br>
 </p>
 
 ![https://github.com/TamayoLeivaJ/PUCV_R_Dataviz_2021/blob/main/Image/PUCV_R_Dataviz_2021_2.png](https://github.com/TamayoLeivaJ/PUCV_R_Dataviz_2021/blob/main/Image/PUCV_R_Dataviz_2021_2.png) 

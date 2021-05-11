@@ -23,7 +23,7 @@
  <a href="https://www.linkedin.com/in/javier-ignacio-tamayo-leiva-94613267/"><img height="32" width="32" src="https://github.com/TamayoLeivaJ/TamayoLeivaJ/blob/main/Image/logo/linkedin.svg" /></a> 
 </div>
 
-![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/Image/PUCV_R_Dataviz_2021.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/Image/PUCV_R_Dataviz_2021.png) 
+![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021.png) 
 
 <h3 style="font-weight:normal" align="center">
 &nbsp;Contenido&nbsp;

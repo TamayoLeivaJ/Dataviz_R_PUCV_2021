@@ -54,10 +54,10 @@
 <h3 style="font-weight:normal" align="left">
 &nbsp;Consideraciones generales&nbsp;
 </h3>
-- Color<br>
-<br><br>
+- Color<br><br>
+
 <h3 style="font-weight:normal" align="left">
-&nbsp;Sesión I&nbsp;
+&nbsp;Sesión II&nbsp;
 </h3>
 </p>
 

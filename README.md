@@ -30,7 +30,7 @@
 </h3>
 <p style="text-align:justify">
 <h3 style="font-weight:normal" align="left">
-&nbsp;Sesión I&nbsp;
+&nbsp;[Sesión I](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021_Slides/Sesion_001/Sesion_001.html)&nbsp;
 </h3>
 
 <h3 style="font-weight:normal" align="left">

@@ -28,24 +28,20 @@
 <h3 style="font-weight:normal" align="center">
 &nbsp;Contenido&nbsp;
 </h3>
-
+<p style="text-align:justify">
 <h3 style="font-weight:normal" align="left">
 &nbsp;Sesión I&nbsp;
 </h3>
 
-<p style="text-align:justify">
-<br>
 <h3 style="font-weight:normal" align="left">
 &nbsp;R & RStudio&nbsp;
 </h3>
-
 - Lenguaje de programación R <br>
-- RStudio (IDE)<br><br>
+- RStudio (IDE)<br>
 
 <h3 style="font-weight:normal" align="left">
 &nbsp;Visualización con ggplot2&nbsp;
 </h3>
-
 - tidyverse<br>
 - paquete ggplot2<br>
 - Gráfico básico<br>
@@ -58,8 +54,11 @@
 <h3 style="font-weight:normal" align="left">
 &nbsp;Consideraciones generales&nbsp;
 </h3>
-
 - Color<br>
+<br><br>
+<h3 style="font-weight:normal" align="left">
+&nbsp;Sesión I&nbsp;
+</h3>
 </p>
 
 ![https://github.com/TamayoLeivaJ/PUCV_R_Dataviz_2021/blob/main/Image/PUCV_R_Dataviz_2021_2.png](https://github.com/TamayoLeivaJ/PUCV_R_Dataviz_2021/blob/main/Image/PUCV_R_Dataviz_2021_2.png) 

@@ -26,3 +26,4 @@
 </div>
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV/Workshop_2021/Image/PUCV_R_Dataviz_2021.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV/Workshop_2021/Image/PUCV_R_Dataviz_2021.png) 
+

@@ -29,16 +29,20 @@
 &nbsp;Contenido&nbsp;
 </h3>
 
+<h3 style="font-weight:normal" align="left">
+&nbsp;Sesión I&nbsp;
+</h3>
+
 <p style="text-align:justify">
 <br>
- <h3 style="font-weight:normal" align="center">
+<h3 style="font-weight:normal" align="left">
 &nbsp;R & RStudio&nbsp;
 </h3>
 
 - Lenguaje de programación R <br>
 - RStudio (IDE)<br><br>
 
-<h3 style="font-weight:normal" align="center">
+<h3 style="font-weight:normal" align="left">
 &nbsp;Visualización con ggplot2&nbsp;
 </h3>
 
@@ -51,7 +55,7 @@
 - Transformación estadística<br>
 - Otros Ajustes<br>
 
-<h3 style="font-weight:normal" align="center">
+<h3 style="font-weight:normal" align="left">
 &nbsp;Consideraciones generales&nbsp;
 </h3>
 

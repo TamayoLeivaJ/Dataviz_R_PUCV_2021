@@ -2048,7 +2048,7 @@ En el siguiente link pueden revisar si su paleta de color es adecuada (daltonism
 ### ¿Donde consultar otras paletas de color?
 
 .center[
-Opciones de paletas de color <br><br><br> 
+Buscar paletas de color <br><br><br> 
 [EmilHvitfeldt/r-color-palettes](https://github.com/EmilHvitfeldt/r-color-palettes)<br><br>
 [Abobe Color](https://color.adobe.com/create/color-wheel)<br><br>
 [Color Scheme Designer](https://colorschemedesigner.com/csd-3.5/)<br><br>

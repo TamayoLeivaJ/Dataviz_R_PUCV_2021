@@ -61,5 +61,5 @@
 </h3>
 </p>
 
-![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/Image/PUCV_R_Dataviz_2021_2.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/Image/PUCV_R_Dataviz_2021_2.png) 
+![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_2.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_2.png) 
 

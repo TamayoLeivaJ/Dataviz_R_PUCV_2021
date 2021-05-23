@@ -57,7 +57,15 @@
 - Color<br><br>
 
 <h3 style="font-weight:normal" align="left">
-&nbsp;Sesión II&nbsp;
+&nbsp;Sesión II&nbsp; :building_construction:
+</h3>
+
+<h3 style="font-weight:normal" align="left">
+&nbsp;Sesión III&nbsp; :building_construction:
+</h3>
+
+<h3 style="font-weight:normal" align="left">
+&nbsp;Sesión IV&nbsp; :building_construction:
 </h3>
 </p>
 

@@ -30,7 +30,7 @@
 </h3>
 <p style="text-align:justify">
 <h3 style="font-weight:normal" align="left">
-&nbsp;Sesión I <a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html">(Link)</a> &nbsp;
+&nbsp;Sesión I (<a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html">Link</a>) &nbsp;
 </h3>
 
 <h3 style="font-weight:normal" align="left">

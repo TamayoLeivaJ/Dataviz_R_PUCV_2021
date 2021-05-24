@@ -87,7 +87,7 @@
 &nbsp;- Estádistica descriptiva &nbsp;
 </h4>
 
-- Correlaciones <br>
+- Análisis de correlación <br>
 - Análisis de varianza <br>
 - Modelos Liniales <br>
 - Modelos no liniales <br>

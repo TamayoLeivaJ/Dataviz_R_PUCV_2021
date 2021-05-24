@@ -91,6 +91,7 @@
 - Análisis de varianza <br>
 - Modelos Liniales <br>
 - Modelos no liniales <br>
+- {report} package <br>
 
 <h3 style="font-weight:normal" align="left">
 &nbsp;Sesión III&nbsp; (:building_construction:)

@@ -37,15 +37,15 @@
 &nbsp;R & RStudio&nbsp;
 </h3>
 
-- Lenguaje de programación R <br>
+- R (Lenguaje de programación)<br>
 - RStudio (IDE)<br>
 
 <h3 style="font-weight:normal" align="left">
 &nbsp;Visualización con ggplot2&nbsp;
 </h3>
 
-- tidyverse<br>
-- paquete ggplot2<br>
+- {tidyverse} package<br>
+- {ggplot2} package<br>
 - Gráfico básico<br>
 - Mapeos estéticos<br>
 - Gráficos en capas<br>

@@ -36,12 +36,14 @@
 <h3 style="font-weight:normal" align="left">
 &nbsp;R & RStudio&nbsp;
 </h3>
+
 - Lenguaje de programación R <br>
 - RStudio (IDE)<br>
 
 <h3 style="font-weight:normal" align="left">
 &nbsp;Visualización con ggplot2&nbsp;
 </h3>
+
 - tidyverse<br>
 - paquete ggplot2<br>
 - Gráfico básico<br>
@@ -54,6 +56,7 @@
 <h3 style="font-weight:normal" align="left">
 &nbsp;Consideraciones generales&nbsp;
 </h3>
+
 - Color<br><br>
 
 <h3 style="font-weight:normal" align="left">
@@ -70,6 +73,7 @@
 <h4 style="font-weight:normal" align="left">
 &nbsp;Visualización de datos&nbsp;
 </h4>
+
 - Boxplot <br>
 - Histograms <br>
 - Densiplots <br>

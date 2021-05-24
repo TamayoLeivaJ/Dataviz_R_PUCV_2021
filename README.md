@@ -60,6 +60,36 @@
 &nbsp;Sesión II&nbsp; :building_construction:
 </h3>
 
+&nbsp;Exploratory Data Analysis (EDA)&nbsp;
+</h3>
+<h4 style="font-weight:normal" align="left">
+&nbsp;Resumir datos en R&nbsp;
+</h4>
+- {gtsummary} package <br>
+
+<h4 style="font-weight:normal" align="left">
+&nbsp;Visualización de datos&nbsp;
+</h4>
+- Boxplot <br>
+- Histograms <br>
+- Densiplots <br>
+- Heatmaps <br>
+
+<h4 style="font-weight:normal" align="left">
+&nbsp;Estádistica descriptiva &nbsp;
+</h4>
+
+- Correlaciones <br>
+- Análisis de varianza en R <br>
+- Modelos Liniales <br>
+- Modelos no liniales <br>
+
+<h4 style="font-weight:normal" align="left">
+&nbsp;Visualización de resultados&nbsp;
+</h4>
+
+- {ggpubr} package <br>
+
 <h3 style="font-weight:normal" align="left">
 &nbsp;Sesión III&nbsp; :building_construction:
 </h3>

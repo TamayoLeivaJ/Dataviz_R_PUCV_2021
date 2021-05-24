@@ -64,17 +64,17 @@
 </h3>
 
 <h3 style="font-weight:normal" align="left">
-&nbsp;Exploratory Data Analysis (EDA)&nbsp;
+&nbsp;Exploratory Data Analysis (EDA) en R&nbsp;
 </h3>
 
 <h4 style="font-weight:normal" align="left">
-&nbsp;- Resumir datos en R&nbsp;
+&nbsp;- Resumir datos&nbsp;
 </h4>
 
 - {gtsummary} package <br>
 
 <h4 style="font-weight:normal" align="left">
-&nbsp;- Visualización de datos&nbsp;
+&nbsp;- Visualización descriptiva&nbsp;
 </h4>
 
 - Boxplot <br>
@@ -88,7 +88,7 @@
 </h4>
 
 - Correlaciones <br>
-- Análisis de varianza en R <br>
+- Análisis de varianza <br>
 - Modelos Liniales <br>
 - Modelos no liniales <br>
 

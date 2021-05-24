@@ -77,9 +77,9 @@
 &nbsp;- Visualización descriptiva&nbsp;
 </h4>
 
+- stat_summary() <br> 
 - Boxplot <br>
-- Histograms <br>
-- Densiplots <br>
+- Histograms, Density plot<br>
 - Heatmaps <br>
 - {ggpubr} package <br>
 

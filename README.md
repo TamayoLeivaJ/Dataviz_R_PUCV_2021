@@ -25,33 +25,16 @@
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021.png) 
 
-<div class="float-container">
-  <div class="float-child">
+
+  <h3 style="font-weight:normal" align="left">&nbsp;Sesion I&nbsp; </h3><h3 style="font-weight:normal" align="left">&nbsp;Sesion III&nbsp; </h3>
+  <h4 style="font-weight:normal" align="left">&nbsp;Teórico-Práctico&nbsp; </h4><h4 style="font-weight:normal" align="left">&nbsp;Práctico&nbsp; </h4>
+  - R & RStudio               - Visualización con ggplot2 <br>
+  - Visualización con ggplot2 - Análisis Estadísticos en R <br><br>
   
-  <h3 style="font-weight:normal" align="left">&nbsp;Sesion I&nbsp; </h3>
-  <h4 style="font-weight:normal" align="left">&nbsp;Teórico-Práctico&nbsp; </h4>
-  - R & RStudio <br>
-  - Visualización con ggplot2 <br><br>
-  
-  <h3 style="font-weight:normal" align="left">&nbsp;Sesion II&nbsp; </h3>
-  <h4 style="font-weight:normal" align="left">&nbsp;Teórico-Práctico&nbsp; </h4>
-  - Exploratory Data Analysis (EDA) en R <br><br>  
-  
-  </div>
-  <div class="float-child">
-  
-  <h3 style="font-weight:normal" align="left">&nbsp;Sesion III&nbsp; </h3>
-  <h4 style="font-weight:normal" align="left">&nbsp;Práctico&nbsp; </h4>
-  - Visualización con ggplot2 <br>
-  - Análisis Estadísticos en R <br><br>
-  
-  <h3 style="font-weight:normal" align="left">&nbsp;Sesion IV&nbsp; </h3>
-  <h4 style="font-weight:normal" align="left">&nbsp;Teórico-Práctico&nbsp; </h4>
-  - Gráficos compuestos en R <br>
-  - Manipulación de datos en R <br><br>  
-  
-  </div>
-</div>
+  <h3 style="font-weight:normal" align="left">&nbsp;Sesion II&nbsp; </h3><h3 style="font-weight:normal" align="left">&nbsp;Sesion IV&nbsp; </h3>
+  <h4 style="font-weight:normal" align="left">&nbsp;Teórico-Práctico&nbsp; </h4><h4 style="font-weight:normal" align="left">&nbsp;Teórico-Práctico&nbsp; </h4>
+  - Resumir datos                        - Gráficos compuestos en R <br>
+  - Exploratory Data Analysis (EDA) en R - Manipulación de datos en R <br><br><br>
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png)
 

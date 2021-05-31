@@ -49,12 +49,13 @@ Javier Tamayo Leiva <br>
 
 <h2 style="font-weight:normal" align="center">Contenido </h2>
 
-![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png)
-
 <p style="text-align:justify">
+
 <h2 style="font-weight:normal" align="left">
 &nbsp;Sesión I (<a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html">Link</a>) &nbsp;
 </h2>
+
+![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png)
 
 <h3 style="font-weight:normal" align="left">
 &nbsp;R & RStudio&nbsp;
@@ -80,13 +81,13 @@ Javier Tamayo Leiva <br>
 &nbsp;Consideraciones generales&nbsp;
 </h3>
 
-- Color<br><br>
+- Color<br><br><br>
+
+<h2 style="font-weight:normal" align="left">
+&nbsp;Sesión II&nbsp; (:building_construction:)
+</h2>
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png)
-
-<h3 style="font-weight:normal" align="left">
-&nbsp;Sesión II&nbsp; (:building_construction:)
-</h3>
 
 <h3 style="font-weight:normal" align="left">
 &nbsp;Exploratory Data Analysis (EDA) en R&nbsp;
@@ -116,19 +117,21 @@ Javier Tamayo Leiva <br>
 - Análisis de varianza <br>
 - Modelos Liniales <br>
 - Modelos no liniales <br>
-- {report} package <br>
+- {report} package <br><br><br>
 
-![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png)
-
-<h3 style="font-weight:normal" align="left">
+<h2 style="font-weight:normal" align="left">
 &nbsp;Sesión III&nbsp; (:building_construction:)
-</h3>
+</h2>
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png)
 
-<h3 style="font-weight:normal" align="left">
+
+<h2 style="font-weight:normal" align="left">
 &nbsp;Sesión IV&nbsp; (:building_construction:)
-</h3>
+</h2>
+
+![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png)
+
 </p>
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_2.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_2.png) 

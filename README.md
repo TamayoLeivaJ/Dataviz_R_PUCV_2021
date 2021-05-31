@@ -87,7 +87,7 @@ Javier Tamayo Leiva <br>
 &nbsp;Sesión II&nbsp; (:building_construction:)
 </h2>
 
-![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SII.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png)
+![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SII.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SII.png)
 
 <h3 style="font-weight:normal" align="left">
 &nbsp;Exploratory Data Analysis (EDA) en R&nbsp;

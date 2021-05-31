@@ -25,7 +25,7 @@
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021.png) 
 
-<h3 style="font-weight:normal" align="left">Bienvenido! </h3>
+<h2 style="font-weight:normal" align="left">Bienvenido! </h2>
 Esta página contiene el material del curso teórico-práctico para la visualización y análisis estadístico en R. Realizado para la Pontificia Universidad Católica de Valparaíso, durante junio - agosto 2021.<br>     
 
 <h3 style="font-weight:normal" align="left">Horario </h3>
@@ -47,7 +47,7 @@ Javier Tamayo Leiva <br>
 - (2:30 h) [Sesión III](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): Taller de exploración de datos (EDA) y visualización en R <br>
 - (2:30 h) [Sesión IV](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): Manipulación de datos y visualizaciones compuestas en R <br><br>
 
-<h3 style="font-weight:normal" align="left">Material </h3>
+<h2 style="font-weight:normal" align="center">Material </h2>
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png)
 

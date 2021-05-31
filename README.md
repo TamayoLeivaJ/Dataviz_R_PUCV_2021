@@ -25,8 +25,8 @@
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021.png) 
 
-<div class="row">
-  <div class="col-md-8" markdown="1">
+<div class="float-container">
+  <div class="float-child">
   
   <h3 style="font-weight:normal" align="left">&nbsp;Sesion I&nbsp; </h3>
   <h4 style="font-weight:normal" align="left">&nbsp;Teórico-Práctico&nbsp; </h4>
@@ -38,7 +38,7 @@
   - Exploratory Data Analysis (EDA) en R <br><br>  
   
   </div>
-  <div class="col-md-4" markdown="1">
+  <div class="float-child">
   
   <h3 style="font-weight:normal" align="left">&nbsp;Sesion III&nbsp; </h3>
   <h4 style="font-weight:normal" align="left">&nbsp;Práctico&nbsp; </h4>

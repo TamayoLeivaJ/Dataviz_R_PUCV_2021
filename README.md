@@ -25,6 +25,34 @@
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021.png) 
 
+<div class="row">
+  <div class="column"></div>
+  <h3 style="font-weight:normal" align="center">&nbsp;Sesion I&nbsp; </h3>
+  <h4 style="font-weight:normal" align="center">&nbsp;Teórico-Práctico&nbsp; </h4>
+  - R & RStudio <br>
+  - Visualización con ggplot2 <br><br>
+  
+  <h3 style="font-weight:normal" align="center">&nbsp;Sesion II&nbsp; </h3>
+  <h4 style="font-weight:normal" align="center">&nbsp;Teórico-Práctico&nbsp; </h4>
+  - Exploratory Data Analysis (EDA) en R <br><br>  
+  
+  <div class="column"></div>
+  <h3 style="font-weight:normal" align="center">&nbsp;Sesion III&nbsp; </h3>
+  <h4 style="font-weight:normal" align="center">&nbsp;Práctico&nbsp; </h4>
+  - Visualización con ggplot2 <br>
+  - Análisis Estadísticos en R <br><br>
+  
+  <h3 style="font-weight:normal" align="center">&nbsp;Sesion IV&nbsp; </h3>
+  <h4 style="font-weight:normal" align="center">&nbsp;Teórico-Práctico&nbsp; </h4>
+  - Gráficos compuestos en R <br>
+  - Manipulación de datos en R <br><br>  
+  
+</div>
+
+<div class="center">
+![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png)
+</div>
+
 <h3 style="font-weight:normal" align="center">
 &nbsp;Contenido&nbsp;
 </h3>

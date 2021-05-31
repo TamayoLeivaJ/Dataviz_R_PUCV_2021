@@ -84,7 +84,7 @@ Javier Tamayo Leiva <br>
 - Color<br><br>
 
 <h2 style="font-weight:normal" align="left">
-&nbsp;Sesión II&nbsp; (:building_construction:)
+&nbsp;Sesión II&nbsp; (<a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_002/Sesion_002.html">Link</a>)
 </h2>
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SII.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SII.png)

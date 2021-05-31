@@ -47,19 +47,14 @@ Javier Tamayo Leiva <br>
 - (2:30 h) [Sesión III](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): Taller de exploración de datos (EDA) y visualización en R <br>
 - (2:30 h) [Sesión IV](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): Manipulación de datos y visualizaciones compuestas en R <br><br>
 
-<h2 style="font-weight:normal" align="center">Material </h2>
+<h2 style="font-weight:normal" align="center">Contenido </h2>
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png)
 
-
-<h3 style="font-weight:normal" align="center">
-&nbsp;Contenido&nbsp;
-</h3>
-
 <p style="text-align:justify">
-<h3 style="font-weight:normal" align="left">
+<h2 style="font-weight:normal" align="left">
 &nbsp;Sesión I (<a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html">Link</a>) &nbsp;
-</h3>
+</h2>
 
 <h3 style="font-weight:normal" align="left">
 &nbsp;R & RStudio&nbsp;
@@ -123,9 +118,13 @@ Javier Tamayo Leiva <br>
 - Modelos no liniales <br>
 - {report} package <br>
 
+![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png)
+
 <h3 style="font-weight:normal" align="left">
 &nbsp;Sesión III&nbsp; (:building_construction:)
 </h3>
+
+![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png)
 
 <h3 style="font-weight:normal" align="left">
 &nbsp;Sesión IV&nbsp; (:building_construction:)

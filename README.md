@@ -81,7 +81,7 @@ Javier Tamayo Leiva <br>
 &nbsp;Consideraciones generales&nbsp;
 </h3>
 
-- Color<br><br><br>
+- Color<br><br>
 
 <h2 style="font-weight:normal" align="left">
 &nbsp;Sesión II&nbsp; (:building_construction:)
@@ -117,7 +117,7 @@ Javier Tamayo Leiva <br>
 - Análisis de varianza <br>
 - Modelos Liniales <br>
 - Modelos no liniales <br>
-- {report} package <br><br><br>
+- {report} package <br><br>
 
 <h2 style="font-weight:normal" align="left">
 &nbsp;Sesión III&nbsp; (:building_construction:)
@@ -133,6 +133,3 @@ Javier Tamayo Leiva <br>
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SI.png)
 
 </p>
-
-![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_2.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_2.png) 
-

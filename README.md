@@ -27,7 +27,7 @@
 
 <div class="row">
   <div class="col-md-8" markdown="1">
-  <h3 style="font-weight:normal" align="left">&nbsp;(<ahref="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html">Sesión I</a>)&nbsp; </h3>
+  <h3 style="font-weight:normal" align="left"> <a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html">Sesión I</a> </h3>
   <h4 style="font-weight:normal" align="left">&nbsp;Teórico-Práctico&nbsp; </h4>
   - R & RStudio <br>
   - Visualización con ggplot2 <br><br>

@@ -90,7 +90,7 @@ Javier Tamayo Leiva <br>
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SII.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SII.png)
 
 <h3 style="font-weight:normal" align="left">
-&nbsp;Análisis exploratorio de datos ( *Exploratory data analysis* ) en R&nbsp;
+&nbsp;Análisis exploratorio de datos (<i>Exploratory data analysis</i>) en R&nbsp;
 </h3>
 
 <h4 style="font-weight:normal" align="left">

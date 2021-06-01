@@ -107,6 +107,7 @@ Javier Tamayo Leiva <br>
 </h4>
 
 - Análisis de correlación <br>
+- Reducción de dimensión <br> 
 - Modelos Liniales <br>
 - Análisis de varianza <br>
 - {report} package <br><br>

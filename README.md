@@ -90,34 +90,43 @@ Javier Tamayo Leiva <br>
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SII.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SII.png)
 
 <h3 style="font-weight:normal" align="left">
-&nbsp;Exploratory Data Analysis (EDA) en R&nbsp;
+&nbsp;Análisis exploratorio de datos (*Exploratory data analysis*) en R&nbsp;
 </h3>
 
 <h4 style="font-weight:normal" align="left">
-&nbsp;- Resumir datos&nbsp;
+&nbsp;- Estadística descriptiva&nbsp;
 </h4>
 
-- {gtsummary} package <br>
+- {gtsummary} package <br><br>
+- Visualización de distribuciones <br><br>
+ - `stat_summary()` <br> 
+ - Boxplot <br>
+ - Histograms, Density plot<br>
+ - Heatmaps <br>
+ - {ggpubr} package <br><br>
+- Análisis de normalidad <br><br>
+ - Shapiro–Wilk test <br><br>
+- Análisis de Homocedasticidad <br><br>
+ - Bartlett’s test <br>
+ - Levene’s test <br>
+ - Fligner-Killeen test <br>
 
 <h4 style="font-weight:normal" align="left">
-&nbsp;- Visualización descriptiva&nbsp;
+&nbsp;- Inferencia Estadística &nbsp;
 </h4>
 
-- stat_summary() <br> 
-- Boxplot <br>
-- Histograms, Density plot<br>
-- Heatmaps <br>
-- {ggpubr} package <br>
-
-<h4 style="font-weight:normal" align="left">
-&nbsp;- Estádistica descriptiva &nbsp;
-</h4>
-
-- Análisis de correlación <br>
-- Análisis de varianza <br>
-- Modelos Liniales <br>
-- Modelos no liniales <br>
+- Análisis de correlación <br><br>
+ - Pearson's *r* <br>
+ - Spearman's *ρ* (rho) <br>
+ - Kendall's *τ* (tau) <br><br>
+- Modelos Liniales <br><br>
+ - `lm()` <br><br>
+- Análisis de varianza <br><br>
+ - F-test <br>
+ - ANOVA test <br>
+ - Kruskal-Wallis test <br><br>
 - {report} package <br><br>
+
 
 <h2 style="font-weight:normal" align="left">
 &nbsp;Sesión III&nbsp; (:building_construction:)

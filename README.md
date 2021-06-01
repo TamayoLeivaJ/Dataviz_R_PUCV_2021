@@ -98,35 +98,18 @@ Javier Tamayo Leiva <br>
 </h4>
 
 - {gtsummary} package <br><br>
-- Visualización de distribuciones <br><br>
- - `stat_summary()` <br> 
- - Boxplot <br>
- - Histograms, Density plot<br>
- - Heatmaps <br>
- - {ggpubr} package <br><br>
-- Análisis de normalidad <br><br>
- - Shapiro–Wilk test <br><br>
-- Análisis de Homocedasticidad <br><br>
- - Bartlett’s test <br>
- - Levene’s test <br>
- - Fligner-Killeen test <br>
+- Visualización de distribuciones <br>
+- Análisis de normalidad <br>
+- Análisis de Homocedasticidad <br>
 
 <h4 style="font-weight:normal" align="left">
 &nbsp;- Inferencia Estadística &nbsp;
 </h4>
 
-- Análisis de correlación <br><br>
- - Pearson's *r* <br>
- - Spearman's *ρ* (rho) <br>
- - Kendall's *τ* (tau) <br><br>
-- Modelos Liniales <br><br>
- - `lm()` <br><br>
-- Análisis de varianza <br><br>
- - F-test <br>
- - ANOVA test <br>
- - Kruskal-Wallis test <br><br>
+- Análisis de correlación <br>
+- Modelos Liniales <br>
+- Análisis de varianza <br>
 - {report} package <br><br>
-
 
 <h2 style="font-weight:normal" align="left">
 &nbsp;Sesión III&nbsp; (:building_construction:)

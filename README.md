@@ -38,7 +38,7 @@ Javier Tamayo Leiva <br>
 
 <h3 style="font-weight:normal" align="left">Requisitos </h3>
 - R (<a href="https://cran.r-project.org">Link</a>) <br>
-- RStudio](<a href="https://www.rstudio.com/products/rstudio/download/">Link</a>) <br>
+- RStudio(<a href="https://www.rstudio.com/products/rstudio/download/">Link</a>) <br>
 
 <h3 style="font-weight:normal" align="left">Programa </h3>
 

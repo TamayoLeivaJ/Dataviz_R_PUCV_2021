@@ -98,6 +98,7 @@ Javier Tamayo Leiva <br>
 </h4>
 
 - {gtsummary} package <br>
+- {ggpubr} package <br>
 - Visualizando distribuciones <br>
 - Análisis de normalidad <br>
 - Análisis de Homocedasticidad <br>

@@ -124,7 +124,7 @@ Pueden instalar todos los paquetes necesarios para ejecutar cada ejemplo del cur
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIII.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIII.png)
 
 <h3 style="font-weight:normal" align="left">
-&nbsp;Manejos de datos en R&nbsp;
+&nbsp;Visualización y Análisis exploratorios en R&nbsp;
 </h3>
 
 - Reportes con {RMarkdown} package<br>

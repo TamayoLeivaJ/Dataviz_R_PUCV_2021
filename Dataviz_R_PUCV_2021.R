@@ -9,7 +9,7 @@ if(any(!.inst)) {
 }
 
 # Instalar paquetes GitHub
-.inst <- git_source %in% installed.packages()
+.inst <- git_packages %in% installed.packages()
 if(any(!.inst)) {
-  devtools::install_github(git_source[!.inst])
+  devtools::install_github(git_packages[!.inst])
 }

@@ -42,7 +42,7 @@ Javier Tamayo Leiva <br>
 
 Pueden instalar todos los paquetes necesarios para ejecutar cada ejemplo del curso mediante el siguiente comando:
 
-`source("https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Dataviz_R_PUCV_2021.R")`
+`source("https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/Dataviz_R_PUCV_2021.R")`
 
 <h3 style="font-weight:normal" align="left">Programa </h3>
 

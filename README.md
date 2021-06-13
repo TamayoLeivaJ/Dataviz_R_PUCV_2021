@@ -48,10 +48,10 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 
 <h3 style="font-weight:normal" align="left">Programa </h3>
 
-- (2:30 h) [Sesión I](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): Introducción a R y RStudio para la visualización con ggplot2 <br>
-- (2:30 h) [Sesión II](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): Estadística para la exploración de datos (Exploratory Data Analysis - EDA) en R <br>
-- (2:30 h) [Sesión III](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): (Práctico) Exploración de datos (EDA) y visualización en R <br>
-- (2:30 h) [Sesión IV](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): Manejos de datos en R <br><br>
+- (2:30 h) [Sesión I](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): Introducción a R y RStudio para la visualización con ggplot2 (Teórico) <br>
+- (2:30 h) [Sesión II](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): Estadística para la exploración de datos (Exploratory Data Analysis - EDA) en R (Teórico)<br>
+- (2:30 h) [Sesión III](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): Exploración de datos (EDA) y visualización en R (Práctico)<br>
+- (2:30 h) [Sesión IV](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): Manejos de datos en R con tidyverse (Teórico)<br><br>
 
 <h2 style="font-weight:normal" align="center">Contenido </h2>
 
@@ -141,7 +141,7 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIV.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIV.png)
 
 <h3 style="font-weight:normal" align="left">
-&nbsp;Manejos de datos en R&nbsp;
+&nbsp;Manejos de datos en R con tidyverse &nbsp;
 </h3>
 
 - Cargar tablas con {readr} package<br>

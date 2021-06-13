@@ -38,12 +38,11 @@ Javier Tamayo Leiva <br>
 
 <h3 style="font-weight:normal" align="left">Requisitos </h3>
 - R (<a href="https://cran.r-project.org">Link</a>) <br>
-- RStudio(<a href="https://www.rstudio.com/products/rstudio/download/">Link</a>) <br>
+- RStudio(<a href="https://www.rstudio.com/products/rstudio/download/">Link</a>) <br><br>
 
 Puede instalar todos los paquetes necesarios para ejecutar cada ejemplo del curso mediante el siguiente comando:
 
-
-`source("https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/install_packages.R")`
+`source("https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Dataviz_R_PUCV_2021.R")`
 
 <h3 style="font-weight:normal" align="left">Programa </h3>
 

@@ -124,11 +124,29 @@ Puede instalar todos los paquetes necesarios para ejecutar cada ejemplo del curs
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIII.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIII.png)
 
+<h3 style="font-weight:normal" align="left">
+&nbsp;Manejos de datos en R&nbsp;
+</h3>
+
+- Reportes con {RMarkdown} package<br>
+- Cargar tablas en R<br>
+- Análisis exploratorio de datos en R<br>
+- {patchwork} package <br>
 
 <h2 style="font-weight:normal" align="left">
 &nbsp;Sesión IV&nbsp; (:building_construction:)
 </h2>
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIV.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIV.png)
+
+<h3 style="font-weight:normal" align="left">
+&nbsp;Manejos de datos en R&nbsp;
+</h3>
+
+- Cargar tablas con {readr} package<br>
+- Ordenar datos con {tidyr} package<br>
+- Relacionar datos con {dplyr} package<br>
+- Modificar *strings* con {stringr} package<br>
+- Modificar factores con {forcast} package<br>
 
 </p>

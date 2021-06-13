@@ -40,6 +40,11 @@ Javier Tamayo Leiva <br>
 - R (<a href="https://cran.r-project.org">Link</a>) <br>
 - RStudio(<a href="https://www.rstudio.com/products/rstudio/download/">Link</a>) <br>
 
+Puede instalar todos los paquetes necesarios para ejecutar cada ejemplo del curso mediante el siguiente comando:
+
+
+`source("https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/install_packages.R")`
+
 <h3 style="font-weight:normal" align="left">Programa </h3>
 
 - (2:30 h) [Sesión I](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): Introducción a R y RStudio para la visualización con ggplot2 <br>

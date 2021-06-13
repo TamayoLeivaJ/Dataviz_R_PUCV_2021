@@ -1,0 +1,2 @@
+install.packages(c("broom","corrplot","flextable","FSA","ggbiplot","ggplot2","ggpubr","ggrepel","gridExtra","gtsummary","Hmisc","knitr",
+                   "patchwork","pheatmap","RColorBrewer","rcompanion","report","rmarckdown","rmarkdown","scales","tidyverse","viridis"))

@@ -115,7 +115,7 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 
 - Análisis de correlación <br>
 - Reducción de dimensión <br> 
-- Modelos Liniales <br>
+- Modelos Lineales <br>
 - Análisis de varianza <br>
 - {report} package <br><br>
 

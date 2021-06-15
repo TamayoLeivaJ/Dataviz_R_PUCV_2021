@@ -7,7 +7,7 @@
 
         <meta name="author" content="Javier Tamayo-Leiva" />
     
-        <meta name="date" content="2021-06-13" />
+        <meta name="date" content="2021-06-15" />
     
     <title>Exploración de datos (EDA) y visualización en R (Práctico)</title>
 
@@ -1671,6 +1671,73 @@ src: url(data:application/x-font-truetype;base64,AAEAAAARAQAABAAQR0RFRgs+Cz8AAjw
 </script>
     
     
+        <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">
+      a.sourceLine { display: inline-block; line-height: 1.25; }
+      a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+      a.sourceLine:empty { height: 1.2em; }
+      .sourceCode { overflow: visible; }
+      code.sourceCode { white-space: pre; position: relative; }
+      div.sourceCode { margin: 1em 0; }
+      pre.sourceCode { margin: 0; }
+      @media screen {
+      div.sourceCode { overflow: auto; }
+      }
+      @media print {
+      code.sourceCode { white-space: pre-wrap; }
+      a.sourceLine { text-indent: -1em; padding-left: 1em; }
+      }
+      pre.numberSource a.sourceLine
+        { position: relative; left: -4em; }
+      pre.numberSource a.sourceLine::before
+        { content: attr(data-line-number);
+          position: relative; left: -1em; text-align: right; vertical-align: baseline;
+          border: none; pointer-events: all; display: inline-block;
+          -webkit-touch-callout: none; -webkit-user-select: none;
+          -khtml-user-select: none; -moz-user-select: none;
+          -ms-user-select: none; user-select: none;
+          padding: 0 4px; width: 4em;
+          background-color: #ffffff;
+          color: #a0a0a0;
+        }
+      pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+      div.sourceCode
+        { color: #1f1c1b; background-color: #ffffff; }
+      @media screen {
+      a.sourceLine::before { text-decoration: underline; }
+      }
+      code span. { color: #1f1c1b; } /* Normal */
+      code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+      code span.an { color: #ca60ca; } /* Annotation */
+      code span.at { color: #0057ae; } /* Attribute */
+      code span.bn { color: #b08000; } /* BaseN */
+      code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+      code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+      code span.ch { color: #924c9d; } /* Char */
+      code span.cn { color: #aa5500; } /* Constant */
+      code span.co { color: #898887; } /* Comment */
+      code span.cv { color: #0095ff; } /* CommentVar */
+      code span.do { color: #607880; } /* Documentation */
+      code span.dt { color: #0057ae; } /* DataType */
+      code span.dv { color: #b08000; } /* DecVal */
+      code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+      code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+      code span.fl { color: #b08000; } /* Float */
+      code span.fu { color: #644a9b; } /* Function */
+      code span.im { color: #ff5500; } /* Import */
+      code span.in { color: #b08000; } /* Information */
+      code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+      code span.op { color: #1f1c1b; } /* Operator */
+      code span.ot { color: #006e28; } /* Other */
+      code span.pp { color: #006e28; } /* Preprocessor */
+      code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+      code span.sc { color: #3daee9; } /* SpecialChar */
+      code span.ss { color: #ff5500; } /* SpecialString */
+      code span.st { color: #bf0303; } /* String */
+      code span.va { color: #0057ae; } /* Variable */
+      code span.vs { color: #bf0303; } /* VerbatimString */
+      code span.wa { color: #bf0303; } /* Warning */
+    </style>
     
     
     <!-- tabsets -->
@@ -1763,12 +1830,19 @@ src: url(data:application/x-font-truetype;base64,AAEAAAARAQAABAAQR0RFRgs+Cz8AAjw
           <li class="divider"></li>
         </ul>
         <nav role="navigation" id="toc">
-          
+          <ul>
+          <li><a href="#introducción"><span class="toc-section-number">1</span> Introducción</a></li>
+          <li><a href="#requisitos-del-análisis"><span class="toc-section-number">2</span> Requisitos del análisis</a></li>
+          <li><a href="#datos"><span class="toc-section-number">3</span> Datos</a><ul>
+          <li><a href="#información-sobre-el-set-de-datos"><span class="toc-section-number">3.1</span> Información sobre el set de datos</a></li>
+          <li><a href="#cargar-set-de-datos"><span class="toc-section-number">3.2</span> Cargar set de datos</a></li>
+          </ul></li>
+          </ul>
         </nav>
         <ul class="authors">
           <li class="divider"></li>
                                 <li><span><i class="glyphicon glyphicon-user"></i> Javier Tamayo-Leiva</span></li>
-                                         <li><span><i class="glyphicon glyphicon-calendar"></i> 13 June 2021</span></li>
+                                         <li><span><i class="glyphicon glyphicon-calendar"></i> 15 June 2021</span></li>
                   </ul>     
       </div>
       <div class="book-body fixed">
@@ -1788,7 +1862,54 @@ src: url(data:application/x-font-truetype;base64,AAEAAAARAQAABAAQR0RFRgs+Cz8AAjw
       
    
 <!-- Don't indent these lines or it will mess pre blocks indentation --> 
-
+<style>
+body {
+text-align: justify}
+</style>
+<div id="introducción" class="section level1">
+<h1><span class="header-section-number">1</span> Introducción</h1>
+<p>En el siguiente práctico aplicaremos las técnicas y conceptos que hemos desarrollado en las sesiones I y II teórico-prácticas. Para este práctico utilizaremos el set de datos para el análisis de ataque cardíaco <a href>Descargar aquí</a>. El set de datos contiene información sobre 303 pacientes -hombres (207) y mujeres (96)- entre 29 y 77 años, junto a análisis fisiologicos orientados al diagnóstico y estudio de un ataque cardíaco. Realizaremos un análisis exploratorio de datos o <em>EDA</em> para generar preguntas desde nuestro set de datos. <br></p>
+</div>
+<div id="requisitos-del-análisis" class="section level1">
+<h1><span class="header-section-number">2</span> Requisitos del análisis</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># Cargar librerías que usaremos para el análisis</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">library</span>(tidyverse)</a></code></pre></div>
+</div>
+<div id="datos" class="section level1">
+<h1><span class="header-section-number">3</span> Datos</h1>
+<div id="información-sobre-el-set-de-datos" class="section level2">
+<h2><span class="header-section-number">3.1</span> Información sobre el set de datos</h2>
+<ul>
+<li><strong>Age</strong> : Edad del paciente <br></li>
+<li><strong>Sex</strong> : Sexo del paciente (0 = Mujer; 1 = Hombre) <br></li>
+<li><strong>exang</strong> : angina inducida por ejercicio (1 = si; 0 = no)<br></li>
+<li><strong>ca</strong> : número de vasos importantes (0-3)<br></li>
+<li><strong>cp</strong> : Tipo de dolor de pecho <br>
+<ul>
+<li>Value 1: angina típica <br></li>
+<li>Value 2: angina atípica <br></li>
+<li>Value 3: dolor no anginoso <br></li>
+<li>Value 4: asintomático <br></li>
+</ul></li>
+<li><strong>trtbps</strong> : presión arterial en reposo (en mm Hg)<br></li>
+<li><strong>chol</strong> : colesterol en mg/dl obtenido a través del sensor de IMC<br></li>
+<li><strong>fbs</strong> : (fasting blood sugar &gt; 120 mg/dl) (1 = true; 0 = false)<br></li>
+<li><strong>rest_ecg</strong> : resultados electrocardiográficos en reposo <br>
+<ul>
+<li>Value 0: Normal <br></li>
+<li>Value 1: Anomalía de la onda ST-T (inversiones de la onda T y / o elevación o depresión del ST de&gt; 0,05 mV) <br></li>
+<li>Value 2: Muestra hipertrofia ventricular izquierda probable o definitiva según los criterios de Estes <br></li>
+</ul></li>
+<li><strong>thalach</strong> : frecuencia cardíaca máxima alcanzada <br></li>
+<li><strong>target</strong> : 0 = menos probabilidad de ataque cardíaco. 1 = más probabilidad de ataque cardíaco <br>
+<br></li>
+</ul>
+</div>
+<div id="cargar-set-de-datos" class="section level2">
+<h2><span class="header-section-number">3.2</span> Cargar set de datos</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">heart &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;../../001_Data/heart_attack_dataset/heart.csv&quot;</span>)</a></code></pre></div>
+</div>
+</div>
 
    
    

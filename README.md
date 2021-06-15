@@ -3,7 +3,7 @@
 </h1>
 
 <h2 style="font-weight:normal" align="center">
-&nbsp;Talleres de visualización y análisis en R, aplicados a estádistica. <br> Pontificia Universidad Católica de Valparaíso <br> Junio - Agosto 2021 &nbsp;
+&nbsp;Taller de visualización y análisis en R, aplicados a estádistica. <br> Pontificia Universidad Católica de Valparaíso <br> Junio - Agosto 2021 &nbsp;
 </h2>
 
 <div align="center">

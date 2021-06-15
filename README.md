@@ -25,6 +25,8 @@
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021.png) 
 
+Taller de visualización y análisis aplicados a estádistica en R. Taller impartido para la PUCV junio-agosto 2021.
+
 <h2 style="font-weight:normal" align="left">Bienvenido! </h2>
 Esta página contiene el material del curso teórico-práctico para la visualización y análisis estadístico en R. Realizado para la Pontificia Universidad Católica de Valparaíso, durante junio - agosto 2021.<br>     
 

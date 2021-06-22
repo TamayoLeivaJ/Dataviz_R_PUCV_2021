@@ -1,5 +1,5 @@
-cran_packages <- c("broom","corrplot","devtools","flextable","car","FSA","ggplot2","ggpubr","ggrepel","gridExtra","gtsummary","Hmisc","knitr",
-                   "patchwork","pheatmap","RColorBrewer","rcompanion","report","rmarkdown","rmarkdown","scales","tidyverse","viridis")
+cran_packages <- c("broom","car","corrplot","devtools","flextable","FSA","ggplot2","ggpubr","ggrepel","gridExtra","gtsummary","Hmisc","knitr",
+                   "patchwork","pheatmap","RColorBrewer","rcompanion","readxl","report","rmarkdown","rmarkdown","scales","tidyverse","viridis")
 git_packages <- c("vqv/ggbiplot")
 
 # Instalar paquetes CRAN

@@ -150,7 +150,7 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 - {**ggpubr**} package <br>
 
 <h4 style="font-weight:normal" align="left">
-&nbsp; {**Rmarkdown**} package &nbsp;
+&nbsp; {Rmarkdown} package &nbsp;
 </h4>
 
 <h4 style="font-weight:normal" align="left">
@@ -171,7 +171,7 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 - Análisis de varianza <br>
 
 <h4 style="font-weight:normal" align="left">
-&nbsp; {**Patchwork**} package &nbsp;
+&nbsp; {Patchwork} package &nbsp;
 </h4>
 
 <h2 style="font-weight:normal" align="left">

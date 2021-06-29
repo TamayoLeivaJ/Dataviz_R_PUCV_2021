@@ -123,6 +123,13 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 &nbsp;Sesión III&nbsp; (<a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_003/Sesion_003.html">Link</a>)(<a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/003_Tutorial/Sesion_003/Sesion_003.html">Práctico</a>)
 </h2>
 
+<h3 style="font-weight:normal" align="left">
+&nbsp; Material Extra Sesion III (Práctico);
+</h3>
+
+- Archivo {Rmarkdown} (Templado) <a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/003_Tutorial/Sesion_003/Sesion_003_Practico.Rmd">Link</a>(Rmd)<br>
+- Archivo {Rmarkdown} (Ejemplo) <a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/003_Tutorial/Sesion_003/Sesion_003_Practico.html">Link</a>(html)<br>
+
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIII.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIII.png)
 
 <h3 style="font-weight:normal" align="left">
@@ -173,13 +180,6 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 <h4 style="font-weight:normal" align="left">
 &nbsp; {Patchwork} package &nbsp;
 </h4>
-
-<h3 style="font-weight:normal" align="left">
-&nbsp; Material Extra Sesion III (Práctico);
-</h3>
-
-- Archivo {Rmarkdown} (Templado) <a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/003_Tutorial/Sesion_003/Sesion_003_Practico.Rmd">Link</a>(Rmd)<br>
-- Archivo {Rmarkdown} (Ejemplo) <a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/003_Tutorial/Sesion_003/Sesion_003_Practico.html">Link</a>(html)<br>
 
 <h2 style="font-weight:normal" align="left">
 &nbsp;Sesión IV&nbsp; (:building_construction:)

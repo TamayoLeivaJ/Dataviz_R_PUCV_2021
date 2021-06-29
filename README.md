@@ -174,6 +174,13 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 &nbsp; {Patchwork} package &nbsp;
 </h4>
 
+<h3 style="font-weight:normal" align="left">
+&nbsp; Material Extra Sesion III (Práctico);
+</h3>
+
+- Archivo templado {Rmarkdown} (<a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/003_Tutorial/Sesion_003/Sesion_003_Practico.Rmd">Ejemplo Archivo Final (Rmd)</a>)<br>
+- Archivo templado {Rmarkdown} (output) (<a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/003_Tutorial/Sesion_003/Sesion_003_Practico.html">Ejemplo Archivo Final (html)</a>)<br>
+
 <h2 style="font-weight:normal" align="left">
 &nbsp;Sesión IV&nbsp; (:building_construction:)
 </h2>

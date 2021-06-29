@@ -124,7 +124,7 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 </h2>
 
 <h3 style="font-weight:normal" align="left">
-&nbsp; Material Extra Sesion III (Práctico);
+&nbsp; Material Extra Sesion III (Práctico)
 </h3>
 
 - Archivo de Código {Rmarkdown} ("Rmd") <a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/003_Tutorial/Sesion_003/Sesion_003_Practico.Rmd">Link</a><br>

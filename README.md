@@ -125,6 +125,10 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIII.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIII.png)
 
+<h2 style="font-weight:normal" align="left">
+&nbsp;Sesión III&nbsp; (<a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/003_Tutorial/Sesion_003/Sesion_003.html">Práctico</a>)
+</h2>
+
 <h3 style="font-weight:normal" align="left">
 &nbsp;Exploración de datos (EDA) y visualización en R&nbsp;
 </h3>
@@ -133,8 +137,8 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 &nbsp; R & RStudio &nbsp;
 </h4>
 
--  Lenguaje de programación R
--  RStudio (IDE)
+-  Lenguaje de programación **R** <br>
+-  RStudio (IDE) <br>
 
 <h4 style="font-weight:normal" align="left">
 &nbsp; Visualización en R &nbsp;
@@ -148,7 +152,7 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 -  Transformación estadística <br>
 -  Otros Ajustes <br>
 - {**ggpubr**} package <br>
-- {**patchwork**} package <br><br>
+- {**patchwork**} package <br>
 
 <h4 style="font-weight:normal" align="left">
 &nbsp; Rmarkdown &nbsp;
@@ -173,8 +177,6 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 - Análisis de correlación <br>
 - Modelos Lineales <br>
 - Análisis de varianza <br>
-
-[(Práctico)](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/003_Tutorial/Sesion_003/Sesion_003.html) Exploración de datos (EDA) y visualización en R <br>
 
 <h2 style="font-weight:normal" align="left">
 &nbsp;Sesión IV&nbsp; (:building_construction:)

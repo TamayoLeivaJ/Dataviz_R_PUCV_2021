@@ -132,12 +132,14 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 <h4 style="font-weight:normal" align="left">
 &nbsp; R & RStudio &nbsp;
 </h4>
+
 -  Lenguaje de programación R
 -  RStudio (IDE)
 
 <h4 style="font-weight:normal" align="left">
-&nbsp; Visualización en **R** &nbsp;
+&nbsp; Visualización en R &nbsp;
 </h4>
+
 - {**tidyverse**} package <br>
 - {**ggplot2**} package <br>
 -  Mapeos estéticos <br>
@@ -151,10 +153,13 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 <h4 style="font-weight:normal" align="left">
 &nbsp; Rmarkdown &nbsp;
 </h4>
+
 - {**Rmarkdown**} package <br>
+
 <h4 style="font-weight:normal" align="left">
 &nbsp; Estadística descriptiva &nbsp;
 </h4>
+
 - {gtsummary} package <br>
 - {ggpubr} package <br>
 - Visualizando distribuciones <br>
@@ -164,6 +169,7 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 <h4 style="font-weight:normal" align="left">
 &nbsp; Inferencia Estadística &nbsp;
 </h4>
+
 - Análisis de correlación <br>
 - Modelos Lineales <br>
 - Análisis de varianza <br>

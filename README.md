@@ -120,8 +120,7 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 - {report} package <br><br>
 
 <h2 style="font-weight:normal" align="left">
-&nbsp;Sesión III&nbsp; (<a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_003/Sesion_003.html">Link</a>) <br>
-&nbsp;Sesión III&nbsp; (<a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/003_Tutorial/Sesion_003/Sesion_003.html">Práctico</a>)
+&nbsp;Sesión III&nbsp; (<a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_003/Sesion_003.html">Link</a>)(<a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/003_Tutorial/Sesion_003/Sesion_003.html">Práctico</a>)
 </h2>
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIII.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIII.png)

@@ -160,8 +160,7 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 &nbsp; Estadística descriptiva &nbsp;
 </h4>
 
-- {gtsummary} package <br>
-- {ggpubr} package <br>
+- {**gtsummary**} package <br>
 - Visualizando distribuciones <br>
 - Análisis de normalidad <br>
 - Análisis de Homocedasticidad <br>

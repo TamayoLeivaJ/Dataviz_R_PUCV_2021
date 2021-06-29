@@ -148,13 +148,10 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 -  Transformación estadística <br>
 -  Otros Ajustes <br>
 - {**ggpubr**} package <br>
-- {**patchwork**} package <br>
 
 <h4 style="font-weight:normal" align="left">
-&nbsp; Rmarkdown &nbsp;
+&nbsp; {**Rmarkdown**} package &nbsp;
 </h4>
-
-- {**Rmarkdown**} package <br>
 
 <h4 style="font-weight:normal" align="left">
 &nbsp; Estadística descriptiva &nbsp;
@@ -172,6 +169,10 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 - Análisis de correlación <br>
 - Modelos Lineales <br>
 - Análisis de varianza <br>
+
+<h4 style="font-weight:normal" align="left">
+&nbsp; {**Patchwork**} package &nbsp;
+</h4>
 
 <h2 style="font-weight:normal" align="left">
 &nbsp;Sesión IV&nbsp; (:building_construction:)

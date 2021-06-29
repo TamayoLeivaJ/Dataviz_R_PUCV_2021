@@ -50,7 +50,7 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 
 - (2:30 h) [Sesión I](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): Introducción a R y RStudio para la visualización con ggplot2 (Teórico) <br>
 - (2:30 h) [Sesión II](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_002/Sesion_002.html): Estadística para la exploración de datos (Exploratory Data Analysis - EDA) en R (Teórico)<br>
-- (2:30 h) [Sesión III](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): Exploración de datos (EDA) y visualización en R (Práctico)<br>
+- (2:30 h) [Sesión III](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_003/Sesion_003.html): Exploración de datos (EDA) y visualización en R [(Práctico)](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/003_Tutorial/Sesion_003/Sesion_003.html)<br>
 - (2:30 h) [Sesión IV](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_001/Sesion_001.html): Manejos de datos en R con tidyverse (Teórico)<br><br>
 
 <h2 style="font-weight:normal" align="center">Contenido </h2>
@@ -120,7 +120,7 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 - {report} package <br><br>
 
 <h2 style="font-weight:normal" align="left">
-&nbsp;Sesión III&nbsp; (:building_construction:)
+&nbsp;Sesión III&nbsp; (<a href="https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/002_Slides/Sesion_003/Sesion_003.html">Link</a>)
 </h2>
 
 ![https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIII.png](https://github.com/TamayoLeivaJ/Dataviz_R_PUCV_2021/blob/main/Image/PUCV_R_Dataviz_2021_SIII.png)
@@ -129,10 +129,46 @@ Nota: Solo es necesario que corras este comando una vez al comenzar del curso.<b
 &nbsp;Exploración de datos (EDA) y visualización en R&nbsp;
 </h3>
 
-- Reportes con {RMarkdown} package<br>
-- Cargar tablas en R<br>
-- Análisis exploratorio de datos en R<br>
-- {patchwork} package <br>
+<h4 style="font-weight:normal" align="left">
+&nbsp; R & RStudio &nbsp;
+</h4>
+-  Lenguaje de programación R
+-  RStudio (IDE)
+
+<h4 style="font-weight:normal" align="left">
+&nbsp; Visualización en **R** &nbsp;
+</h4>
+- {**tidyverse**} package <br>
+- {**ggplot2**} package <br>
+-  Mapeos estéticos <br>
+-  Gráficos en capas <br>
+-  Objetos geométricos "Geoms" <br>
+-  Transformación estadística <br>
+-  Otros Ajustes <br>
+- {**ggpubr**} package <br>
+- {**patchwork**} package <br><br>
+
+<h4 style="font-weight:normal" align="left">
+&nbsp; Rmarkdown &nbsp;
+</h4>
+- {**Rmarkdown**} package <br>
+<h4 style="font-weight:normal" align="left">
+&nbsp; Estadística descriptiva &nbsp;
+</h4>
+- {gtsummary} package <br>
+- {ggpubr} package <br>
+- Visualizando distribuciones <br>
+- Análisis de normalidad <br>
+- Análisis de Homocedasticidad <br>
+
+<h4 style="font-weight:normal" align="left">
+&nbsp; Inferencia Estadística &nbsp;
+</h4>
+- Análisis de correlación <br>
+- Modelos Lineales <br>
+- Análisis de varianza <br>
+
+[(Práctico)](https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/003_Tutorial/Sesion_003/Sesion_003.html) Exploración de datos (EDA) y visualización en R <br>
 
 <h2 style="font-weight:normal" align="left">
 &nbsp;Sesión IV&nbsp; (:building_construction:)

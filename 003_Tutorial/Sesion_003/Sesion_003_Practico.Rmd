@@ -66,7 +66,7 @@ A continuación podrán descargar el set de datos **heart** en dos formatos -**c
 ¿Cómo cargar los datos en mi sesión de **R**? <br><br>
 **Opción A**) Si descargas el "heart.csv" la función que debes ocupar es la siguiente: <br>
 ```{r echo=TRUE, message=FALSE, warning=FALSE, eval=FALSE, include=TRUE, class.source='klippy'}
-heart <- read_csv("./heart.csv") 
+heart <- read_csv("heart.csv", ";", escape_double = FALSE, trim_ws = TRUE) 
 ```
 
 **Opción B**) Si descargas el "heart.rds" la función que debes ocupar es la siguiente: <br>

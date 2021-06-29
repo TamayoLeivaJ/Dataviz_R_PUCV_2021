@@ -1,0 +1,898 @@
+---
+title: Exploración de datos y visualización en R
+subtitle: Sesión III - Práctico
+date: "Junio 29, 2021"
+author: "Nombre Apellido"
+output: html_document
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+```{r setup, include=FALSE}
+## Global options
+knitr::opts_chunk$set(echo = TRUE, 
+                      eval = FALSE) # Una vez que hayan completado los espacios deben cambiar `eval` a TRUE
+```
+
+# Introducción
+
+En el siguiente práctico aplicaremos las técnicas y conceptos que hemos desarrollado en las sesiones I y II teórico-prácticas del taller de visualización y análisis en R, aplicados a estádistica. Para este práctico utilizaremos el set de datos para el análisis de ataque cardíaco llamado **heart**. El set de datos contiene información sobre 303 pacientes -hombres (207) y mujeres (96)- entre 29 y 77 años, junto a análisis fisiologicos orientados al diagnóstico y estudio de un ataque cardíaco. Realizaremos un análisis exploratorio de datos o *EDA* para generar preguntas y obtener algunas conclusiones desde nuestro set de datos. Con esa finalidad, al igual que en la sesión II, dividiremos el análisis en dos, según si las estrategias para la visualización y análisis se encuentran más orientadas en la estadística descriptiva (comprender nuestro set de datos) o en la inferencia estadística (testear hipótesis).<br>
+
+# Análisis exploratorio de datos o **EDA**
+
+¿Qué es un análisis exploratorio de datos? <br><br>
+Recordemos en que consiste un análisis exploratorio de datos. El análisis exploratorio de datos o “EDA” (por sus siglas en inglés **E**xploratory **D**ata **A**nalysis), es como se conoce -en estadística- el proceso por el cual un investigador inspecciona un set de datos con la finalidad de generar preguntas, procesar y adquirir conocimiento (procesa datos, genera resultados), y refina o genera nuevas preguntas. <br>
+
+¿Cúal es el proceso iterativo? <br><br>
+
+1.	Generar preguntas basandose en los datos. <br>
+1.	Obtener resultados (procesa datos, gráficos, modelos, etc.). <br>
+1.	Refinar preguntas y/o generar nuevas preguntas. <br><br>
+
+Consideraciones durante el **EDA** <br><br>
+Recordemos que si bien el nombre puede generar la impresión de un proceso estandarizado, en la práctica no hay reglas que limiten los análisis o técnicas utilizadas para generar el proceso iterativo. Sin embargo, existen análisis que se vuelven recurrentes durante el proceso. <br><br>
+
+“Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise. - *John Tukey*” <br>
+
+## Requisitos de nuestro análisis
+
+Acá podrás encontrar todas las librerías que utilizaremos en nuestro análisis. Recuerda que es necesario que se encuentren instaladas en tú sesión de **R** y que al comenzar el análsis le digas a **R** que tiene que cargar esas librerías en la memoría y así permitir el uso de sus funciones. <br>
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, eval=TRUE, include=TRUE, class.source='klippy'}
+# El primer paso será cargar las librerías que usaremos en el análisis. 
+# En caso de que no las hayas instalado aún, primero deberas descomentar 
+# "eliminar el # a la izquierda de source(...)" y correr el siguiente comando: 
+#source("https://tamayoleivaj.github.io/Dataviz_R_PUCV_2021/Dataviz_R_PUCV_2021.R")
+library(tidyverse)
+library(RColorBrewer)
+library(gtsummary)
+library(Hmisc)
+library(corrplot)
+library(ggpubr)
+library(patchwork)
+```
+
+## El set de datos **heart**
+
+Como mencionamos anteriormente en nuestra sesión III utilizaremos el set de datos para el análisis de ataque cardíaco llamado **heart**. En este set encontraremos información sobre 303 pacientes -hombres (207) y mujeres (96)- con edades entre los 29 y 77 años. Sin embargo, el set de datos **heart** también cuenta con información asociada a cada paciente, como el dolor de angina un tipo de dolor de pecho ocasionado por una disminución de la irrigación sanguínea al corazón. Además del tipo de angina, tendremos que investigar como otras variables contenidas en el set de datos pueden ser utilizadas para estudio de un ataque cardíaco. A continuación se describe como cargar el set de datos en tú sesión de **R** y una descripción de la información contenida en el set de datos **heart**.<br>
+
+### Cargar el set de datos
+
+A continuación podrán descargar el set de datos **heart** en dos formatos -**csv** *comma-separated values* y/o **rds** *R data serialized*-. El formato **csv** es un formato de texto plano donde los datos se encuentran separados en columnas mediante comas ",", mientras que el formato **rds** es propio de **R** y tiene las ventajas de a) estar comprímido ("gzip") y b) tener mayor compatibilidad, lo que permitirá realizar el práctico independiente del sistema operativo en su computador o su configuración local.<br>
+
+¿Cómo cargar los datos en mi sesión de **R**? <br><br>
+**Opción A**) Si descargas el "heart.csv" la función que debes ocupar es la siguiente: <br>
+```{r echo=TRUE, message=FALSE, warning=FALSE, eval=FALSE, include=TRUE, class.source='klippy'}
+heart <- read_csv("./heart.csv") 
+```
+
+**Opción B**) Si descargas el "heart.rds" la función que debes ocupar es la siguiente: <br>
+```{r echo=TRUE, message=FALSE, warning=FALSE, eval=FALSE, include=TRUE, class.source='klippy'}
+heart <- read_rds("./heart.rds") 
+```
+
+### Información sobre el set de datos
+- **age** : Edad del paciente <br>
+- **sex** : Sexo del paciente (Mujer; Hombre) <br>
+- **cp** : Tipo de dolor de pecho (angina) <br> 
+    - Value 0: asintomático <br>
+    - Value 1: angina típica <br>
+    - Value 2: angina atípica <br>
+    - Value 3: dolor no anginoso <br>
+- **trtbps** : Presión arterial en reposo (en mm Hg al ingreso en el hospital)<br>
+- **chol** : Colesterol en mg/dl obtenido a través del sensor de IMC<br>
+- **fbs** : (azúcar en sangre en ayunas >120 mg/dl) (1 = true; 0 = false)<br>
+- **restecg** : Resultados electrocardiográficos en reposo. <br>
+    - Value 0: Normal <br>
+    - Value 1: Anomalía de la onda ST-T (inversiones de la onda T y / o elevación o depresión del ST de> 0,05 mV) <br>
+    - Value 2: Muestra hipertrofia ventricular izquierda probable o definitiva según los criterios de Estes. <br>
+- **thalach** : Frecuencia cardíaca máxima alcanzada. <br>
+- **exng** : Angina inducida por ejercicio (1 = si; 0 = no).<br>
+- **oldpeak** : Depresión del ST inducida por el ejercicio en relación con el reposo. <br>
+- **slp** : Pendiente del segmento ST de ejercicio máximo. <br>
+    - Value 0: descendente <br>
+    - Value 1: plano <br>
+    - Value 2: ascendente <br>
+- **caa** : Número de vasos principales (0-4) coloreados por fluoroscopia. <br>
+- **thall**: Frecuencia cardíaca ritmo.<br>
+    - Value 1: defecto fijo <br>
+    - Value 2: normal <br>
+    - Value 3: defecto reversible <br>
+- **output** : 0 = menos probabilidad de ataque cardíaco. 1 = más probabilidad de ataque cardíaco <br><br> 
+
+Sobre la base de las variables contenidas en el set de datos **heart**, ya podríamos dirigir el análisis hacia aquellas variables que son intuitivamente más relevante en el diagnóstico de un ataque al corazón. Podríamos generar algunas de las siguientes preguntas: <br><br>
+
+1. ¿Cuáles son las variables más importantes de nuestro análisis?<br>
+1. ¿Cómo se relaciona la edad (**age**) del paciente con un ataque al corazón?<br>
+1. ¿Cómo se relaciona el sexo (**sex**) del paciente con un ataque al corazón?<br>
+1. ¿Cómo se relaciona el colesterol (**chol**) del paciente con un ataque al corazón?<br>
+1. ¿Cómo se relaciona la presión arterial en reposo (**trtbps**) o la frecuencia cardíaca máxima alcanzada (**thalach**) del paciente con un ataque al corazón?<br><br>
+
+# Estadística descriptiva
+## Tablas de resumen
+
+Pero antes de resolver estas preguntas, lo primero que haremos será realizar un pequeño análisis descriptivo de los valores contenidos en las variables continuas del set de datos **heart**. Las variables serán seleccionadas con la función `select(...)`.<br>
+```{r echo=TRUE}
+heart %>%
+   select(...) %>%
+    summary()
+```
+<br>
+
+A continuación usaremos las funciones del paquete {[gtsummary](http://www.danieldsjoberg.com/gtsummary/)} para generar una tabla descriptiva con mayor detalle. Para facilitar la interpretación de los datos, los nombres de las variables serán modificadas en la tabla con la opción `label = list(...)`. <br> 
+```{r echo=TRUE}
+heart %>%
+  select(...) %>%
+  tbl_summary(
+    by = ...,
+    label = list(...),
+    type = all_continuous() ~ "continuous2",
+    statistic = all_continuous() ~ c("{mean} ({sd})","{p25} - {p75}","{min} - {max}")
+  )
+```
+
+## Visualizando distribuciones 
+A continuación usaremos las funciones del paquete {[ggplot2](https://ggplot2.tidyverse.org/reference/index.html)} para generar gráficos descriptivos de las variables continuas del set de datos **heart**.<br> 
+
+```{r}
+ggplot(data = ..., 
+       aes(x = ..., fill = ...)) +
+  geom_density(alpha=0.5) + 
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       x="...",
+       fill="...")
+```
+
+El factor `alpha=...` ajusta la transparencia del color, en la función anterior el valor fue ajustado al 50% (0.5). Recordemos que el factor **output** (probabilidad de ataque cardíaco) corresponde a una escala discreta representada por "0" (menor) y "1" (mayor), para remplazar la leyenda hemos ocupado `scale_fill_manual(label =c(...))`, además hemos asignado manualmente un color a cada nivel con la opción `values =c(...)` en la función `scale_fill_manual(...)`. En tanto la función `labs(...)` permite asignar nuevas leyendas a las variables mapeadas y a los objetos de la estética general del gráfico como el título, mientras que con la expresión `\n` en la leyenda podemos generar un salto de línea en el texto.<br>
+
+¿Cómo se relaciona la edad (**age**) del paciente con un ataque al corazón? <br><br>
+Las personas de mediana edad (40 a 60 años) tienen una mayor probabilidad de sufrir un ataque cardíaco (según la proporción y el set de datos). <br>
+
+```{r}
+ggplot(data = ..., 
+       aes(x = ..., fill = ...)) +
+  geom_density(alpha=0.5) + 
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       x="...",
+       fill="...")
+```
+
+¿Cómo se relaciona la presión arterial en reposo (**trtbps**) del paciente con un ataque al corazón?<br><br>
+No se observa una tendencía clara de la presión arterial en reposo con la probabilidad de sufrir un ataque cardíaco (según la proporción y el set de datos). <br>
+
+```{r}
+ggplot(data = ..., 
+       aes(x = ..., fill = ...)) +
+  geom_density(alpha=0.5) + 
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       x="...",
+       fill="...")
+```
+
+
+¿Cómo se relaciona el colesterol (**chol**) del paciente con un ataque al corazón?<br><br>
+Las personas con Colesterol > 200 tienen una mayor probabilidad de sufrir un ataque cardíaco (según la proporción y el set de datos). <br>
+
+```{r}
+ggplot(data = ..., 
+       aes(x = ..., fill = ...)) +
+  geom_density(alpha=0.5) + 
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       x="...",
+       fill="...")
+```
+
+
+¿Cómo se relaciona la frecuencia cardíaca máxima alcanzada (**thalach**) del paciente con un ataque al corazón?<br><br>
+Las personas con una frecuencia cardíaca máxima alcanzada >150 tienen una mayor probabilidad de sufrir un ataque cardíaco (según la proporción y el set de datos). <br>
+
+ 
+
+```{r}
+ggplot(data = ..., 
+       aes(x = ..., fill = ...)) +
+  geom_density(alpha=0.5) + 
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       x="...",
+       fill="...")
+```
+
+```{r}
+ggplot(data = ..., 
+       aes(x = ..., fill = ...)) +
+  geom_density(alpha=0.5) + 
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       x="...",
+       fill="...")
+```
+
+
+Las personas con menos vasos principales tienen muchas más probabilidades de sufrir un ataque cardíaco (según la proporción y el set de datos). <br>
+
+ 
+
+## Visualizando Variables Categóricas
+
+A continuación revisaremos cómo se distribuyen las variables categóricas del set de datos **heart**.<br> 
+
+```{r}
+ggplot(data = ..., 
+       aes(x = ..., fill = ...)) +
+  geom_bar(alpha=0.7, position = "fill") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       x=NULL,
+       fill="...")
+```
+
+
+En este caso es necesario generar una modificación a los valores debido a que los grupos muestran distintos tamaños lo que dificulta la interpretación de los resultados, para ello ocuparemos la opción de posición `position = "fill"` en la capa o objeto geom `geom_bar(...)`. Adicionalmente, con la función `scale_y_continuous(labels = scales::percent)` podemos modificar la escala y cambiarla desde proporción a porcentajes, lo que  facilitará la interpretación y mejora la estética del gráfico. <br>
+
+
+
+<br>
+
+
+¿Cómo se relaciona el sexo (**sex**) del paciente con un ataque al corazón?<br><br>
+Las mujeres tienen más probabilidades de tener problemas cardíacos que los hombres (según la proporción y el set de datos). <br>
+
+ 
+
+```{r}
+ggplot(data = ... %>% 
+         mutate(... = recode(..., ...)), 
+       aes(x = ..., fill = ...)) +
+  geom_bar(alpha=0.7, position = "fill") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       x=NULL,
+       fill="...")
+```
+
+Con la función `mutate(...)` podemos modificar (o crear) una columna, mientras que con la función `recode(...)` podemos reasignar los valores dentro de una determinada columna. En este caso es necesario generar una modificación, puesto que los valores se encuentran como un código númerico, lo que dificulta la interpretación de los resultados. <br>
+
+
+
+<br>
+
+
+Pacientes con dolor anginoso típico, atípico y no anginoso muestran una alta proporción de problemas cardíacos (según el set de datos). <br>
+
+
+
+```{r}
+ggplot(data = ... %>% 
+         mutate(... = recode(..., ...)), 
+       aes(x = ..., fill = ...)) +
+  geom_bar(alpha=0.7, position = "fill") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       x=NULL,
+       fill="...")
+```
+
+
+Con una anomalia ST-T del electrocardiográficos en reposo se observan una mayores proporción de problemas cardíacos (según el set de datos). <br>
+
+
+
+```{r}
+ggplot(data = ... %>% 
+         mutate(... = recode(..., ...)), 
+       aes(x = ..., fill = ...)) +
+  geom_bar(alpha=0.7, position = "fill") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       x=NULL,
+       fill="...")
+```
+
+
+Con angina inducida por ejercicio se observan una menor proporción de problemas cardíacos (según el set de datos). <br>
+
+
+
+```{r}
+ggplot(data = ... %>% 
+         mutate(... = recode(..., "0"="Descendente","1"="Plano","2"="Ascendente")), 
+       aes(x = ..., fill = ...)) +
+  geom_bar(alpha=0.7, position = "fill") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       x=NULL,
+       fill="...")
+```
+
+
+Con una pendiente del segmento ST de ejercicio máximo ascendente se observan una mayores proporción de problemas cardíacos (según el set de datos). <br>
+
+
+
+```{r}
+ggplot(data = ... %>% 
+         filter(... != 0) %>% 
+         mutate(... = recode(..., ...)), 
+       aes(x = ..., fill =...)) +
+  geom_bar(alpha=0.7, position = "fill") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       x=NULL,
+       fill="...")
+```
+
+Con la función `filter(...)` podemos eliminar o seleccionar los valores de interes dentro de una determinada columna. En este caso es necesario eliminar las observaciones con valor "0" en la columna "thall", puesto que corresponden a dos pacientes sin la observación. Para realizar este filtro, le hemos indicado a la función que retenga los valores distintos a "0" escribiendo el símbolo de desigualdad `!=`.  <br>
+
+
+
+<br>
+
+
+En pacientes con frecuencia cardíaca (ritmo) normal se observan una mayores proporción de problemas cardíacos (según el set de datos). <br>
+
+
+
+## Visualizando Variables Agrupadas
+
+Sobre la base de las variables contenidas en el set de datos **heart**, que ya hemos análisado de forma independiente, podríamos dirigir el análisis hacia aquellas interacciones entre variables que son relevante en el diagnóstico de un ataque al corazón. Podríamos generar algunas nuevas preguntas: <br><br>
+
+1. ¿Cuáles son las variables más importantes de nuestro análisis?<br>
+1. ¿Cómo se relaciona la edad (**age**) y el sexo (**sex**) del paciente con un ataque al corazón?<br>
+1. ¿Cómo se relaciona el sexo (**sex**) y el colesterol (**chol**) del paciente con un ataque al corazón?<br>
+1. ¿Cómo se relaciona el sexo (**sex**) y la presión arterial en reposo (**trtbps**) del paciente con un ataque al corazón?<br>
+1. ¿Cómo se relaciona el sexo (**sex**) y la frecuencia cardíaca máxima alcanzada (**thalach**) del paciente con un ataque al corazón?<br><br>
+
+```{r}
+ggplot(data = ..., 
+       aes(x = ..., 
+           y = ..., 
+           fill = ...)) +
+  geom_boxplot(outlier.shape = NA) +
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       y="...",
+       x=NULL,
+       fill="...")
+```
+
+
+¿Cómo se relaciona la edad (**age**) y el sexo (**sex**) del paciente con un ataque al corazón?<br><br>
+En pacientes hombres y mujeres más jovenes se observan mayores problemas cardíacos (según el set de datos). <br>
+
+
+
+```{r}
+ggplot(data = ..., 
+       aes(x = ..., 
+           y = ..., 
+           fill = ...)) +
+  geom_boxplot(outlier.shape = NA) +
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       y="...",
+       x=NULL,
+       fill="...")
+```
+
+
+¿Cómo se relaciona el sexo (**sex**) y el colesterol (**chol**) del paciente con un ataque al corazón?<br><br>
+En Hombres y mujeres menores valores de colesterol se observan en pacientes con problemas cardíacos (según el set de datos). <br>
+
+
+
+```{r}
+ggplot(data = ..., 
+       aes(x = ..., 
+           y = ..., 
+           fill = ...)) +
+  geom_boxplot(outlier.shape = NA) +
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       y="...",
+       x=NULL,
+       fill="...")
+```
+
+
+¿Cómo se relaciona el sexo (**sex**) y la presión arterial en reposo (**trtbps**) del paciente con un ataque al corazón?<br><br>
+En pacientes mujeres con menos problemas cardíacos se observa una mayor presión arterial en reposo (en mm Hg) (según el set de datos). <br>
+
+
+
+```{r}
+ggplot(data = ..., 
+       aes(x = ..., 
+           y = ..., 
+           fill = ...)) +
+  geom_boxplot(outlier.shape = NA) +
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       y="...",
+       x=NULL,
+       fill="...")
+```
+
+
+¿Cómo se relaciona el sexo (**sex**) y la frecuencia cardíaca máxima alcanzada (**thalach**) del paciente con un ataque al corazón?<br><br>
+En Hombres y mujeres una mayor frecuencia cardíaca máxima alcanzada se asocia con problemas cardíacos (según el set de datos). <br>
+
+ 
+
+# Inferencia Estadística
+
+En base a los resultados obtenidos en la etapa anterior del análisis, la descriptión estadística de las variables contenidas en el set de datos **heart**, hemos observados la relación entre las principales variables del set de datos. Anteriormente, observamos que factores como la edad, sexo, colesterol, número de vasos principales, presión arterial en reposo, y frecuencia cardíaca máxima de los pacientes se asocian con un mayor riesgo de sufrir problemas cardíaco. Sin embargo, todas las asociaciónes que hemos observado carecen de un sustento estadístico que demuestre que las observaciones no corresponde a un evento aleatorio. Para asegurarnos de las validez en las interpretaciones realizadas anteriormente a continuación realizaremos algunos análisis estadísticos que nos ayuden a confirmar los resultados previos. El primer análisis consiste en una correlación entre parejas de factores.<br>  
+
+## Correlación
+
+¿Qué es la correlación? <br>
+
+La correlación es una medida estadística que nos informa sobre la asociación entre dos variables. Describe cómo se comporta una variable frente a algún cambio en la variable asociada.<br><br>
+
+Interpretación <br>
+
+Si las variables aumentan o disminuyen juntas, entonces tendrán una correlación positiva. Si las variables son opuestas (una aumenta y la otra disminuye), entonces la correlación será negativa entre ellas. Si varían de forma independiente, la correlación entre ellos será cercana a cero.<br><br>
+
+Advertencia <br>
+
+1. Las correlaciones son la medida de dependencia lineal entre dos variables, solo se pueden aplicar entre pares.<br>
+1. Son sensibles al número de muestras. Si el número de muestras es pequeños (<20 ~ 30) el análisis pierde poder estadístico (óptimo ≥ 100) <br>
+
+<br>
+
+¿Cómo calcular la correlación entre pares?<br>
+
+```{r}
+cor(..., ..., 
+    use ="pairwise.complete.obs", 
+    method = "spearman")
+```
+
+
+Spearman: Evalúa la relación monótona. El coeficiente de correlación de Spearman se basa en los valores clasificados por ranking para cada variable en lugar de los datos brutos.<br>
+
+<br>
+
+¿Cómo se relaciona la edad (**age**) del paciente con un ataque al corazón? <br><br>
+La edad se asocia de manera negativa y débil con problemas cardíacos. <br>
+
+<br>
+
+A continuación con la ayuda de los paquetes [{corrplot}](https://github.com/taiyun/corrplot) y [{Hmisc}](https://hbiostat.org/R/Hmisc/) para gráficar múltiples correlaciones entre pares de factores.<br><br>
+
+```{r fig.height=9, fig.width=9}
+# Seleccionar variables numéricas y modificar las variable "sex" a numérica
+... <- ... %>% 
+           mutate(... = case_when(... == "..." ~ ..., 
+                                  ... == "..." ~ ...)) %>% 
+           select_if(is.numeric) %>% as.matrix()
+
+# Calcular la correlación
+cor<-rcorr(..., type="spearman") #"pearson" 
+
+# Ajustar valor de p (múltiples comparaciones)
+cor$P.adj<-p.adjust(cor$P, method = "fdr") 
+dim(cor$P.adj) <- dim(cor$P)              
+
+# Gráfico de las correlaciones
+corrplot(cor$r,                            
+         method="circle", 
+         type="upper", 
+         col=brewer.pal(n=8, name="PuOr"), 
+         tl.cex = 1.5,
+         tl.col="black", 
+         tl.srt = 90, 
+         p.mat = cor$P.adj, 
+         sig.level = 0.05, 
+         insig = "blank", 
+         pch.cex = 1.0,
+         pch.col = "white",
+         cl.cex = 1.2,
+         cl.align.text = "l",
+         cl.offset = 0.5,
+         diag = FALSE, 
+         title ="...", 
+         mar = c(1.5, 1.5, 1.5, 1.5))
+```
+
+
+Como la variable "sex" no es numérica, lo primero es convertir los niveles del factor a numéricos (0 y 1). Adicionalmente, con la opción `sig.level = 0.05` en la función `corrplot(...)`, solo se mostrarán en el gráfico aquellas correlaciones que sean significativas (p < 0.05). <br>
+
+<br>
+
+Factores de frecuencia cardíaca máxima (**thalachh**) se asocian positivamente con una mayor probabilidad de sufrir problemas cardíacos, pero también con angina inducida por ejercicio (**exng**), con la depresión del ST inducida por el ejercicio (**oldpeak**) y la pendiente del segmento ST de ejercicio máximo (**slp**). <br>
+
+## Modelos lineales
+
+El segundo análisis consiste en el estudio de las relaciones lineales entre factores en el set de datos **heart**.<br>
+
+¿Qué es una regresión lineal? <br>
+
+Una regresión lineal es un modelo (ecuación) estadístico que se usa para analizar la relación entre una variable de respuesta (comunmente llamada Y) y una o más variables y sus interacciones (comunmente llamada X o variables explicativas). La regresión lineal asume una relación lineal entre la variable de respuesta y las variables explicativas. Esto significa que puede ajustar una línea entre las dos (o más variables). <br>
+
+Un modelo básico es: <br><br>
+
+$$
+Y = A + B * X
+$$
+
+Donde A corresponde al intersecto (donde empiezas a medir cuando X es cero) y B a la pendiente (el cambio de Y con respecto a X).<br><br>
+
+La idea del modelamiento es generar un modelo ajustado de la mejor forma a nustras variables, encontrando el A y B que mejor se adapten a nuestro set de datos. <br><br>
+
+```{r}
+lm.r <- lm(... ~ ..., data = ...)
+summary(lm.r)
+```
+
+
+La variable de la frecuencia cardíaca máxima (**thalachh**) y la probabilidad de sufrir problemas cardíacos (**output**), muestra una relación lineal débil pero significativa (p-value: 1.697e-14; R^2:  0.1751). <br>
+
+<br>
+
+A continuación revisaremos como se asocian diversos factores que mostrar tener una correlación significativa en la sección anterior. Para ello ocuparemos las función `facet_grid(fila ~ columna)` que nos permitirá generar una cuadrícula que facilitará la interpretación y/o análisis de grupos específicos. <br>
+
+```{r fig.height=9, fig.width=9}
+... %>% mutate(... = case_when(... == ... ~ "...", 
+                                  ... == ... ~ "..."),
+                  ... = case_when(... == ... ~ "..." , 
+                                  ... == ... ~ "...",
+                                  ... == ... ~ "...")) %>%  
+ggplot(aes(x = ..., y = ..., color = ...)) +
+  geom_smooth(method = lm) +
+  scale_color_manual(label = c(...),
+                    values = c(...)) +
+  stat_regline_equation(aes(label =  paste(..eq.label..,
+                                           ..adj.rr.label..,
+                                           sep = "~~~~"))) +
+  theme_classic() +
+  theme(legend.position = "bottom") +
+  facet_grid(... ~ ...) +
+  labs(title = "...",
+       y="...",
+       x="...",
+       color="...")
+```
+
+Con la funció `theme(...)` somo capaces de modificar factores estéticos del gráfico, en el caso anterior hemos modificado la posición original de la leyenda de color con la opción `legend.position = "bottom"` colocándola en la base del gráfico y no a la derecha como se ubica por defecto. <br>
+
+```{r fig.height=9, fig.width=9}
+... %>% mutate(... = case_when(...g == ... ~ "...", 
+                                  ... == ... ~ "..."),
+                   ... = case_when(... == ... ~ "..." , 
+                                  ... == ... ~ "...",
+                                  ... == ... ~ "...",
+                                  ... == ... ~ "...")) %>%  
+ggplot(aes(x = ..., y = ..., color = ...)) +
+  geom_point() +
+  geom_smooth(method = lm) +
+  scale_color_manual(label = c(...),
+                    values = c(...)) +
+  stat_regline_equation(aes(label =  paste(..eq.label..,
+                                           ..adj.rr.label..,
+                                           sep = "~~~~"))) +
+  theme_classic() +
+  theme(legend.position = "bottom") +
+  facet_grid(... ~ ...) +
+  labs(title = "...",
+       y="...",
+       x="...",
+       color="...")
+```
+
+
+La variable de la frecuencia cardíaca máxima (**thalachh**) y la depresión del ST inducida por el ejercicio (**oldpeak**) se asocian fuertemente en los tipo de dolor de pecho (**cp**) "angina típica" (positivamente) y "dolor no anginoso" (negativamente) en el grupo de pacientes que si muestran angina inducida por ejercicio (**exng**) para el grupor con una mayor probabilidad de sufrir problemas cardíacos. Sin embargo el se necesitan mayores análisis en estos grupos debido al número de muestras por grupo. <br>
+
+## Análisis de varianza
+
+El tercer análisis consiste en el estudio de las varianza entre factores agrupados en el set de datos **heart**.<br>
+
+¿Qué es un análisis de varianza? <br>
+
+Son una colección de análisis que permiten examinar si las medias de los grupos (poblaciones, muestras) difieren entre sí. Existen métodos que difieren en el número de grupos que pueden comparar. Además existen métodos parametricos (requieren que se cumplan los supuestos) y no parámetricos (no requieren que se cumplan todos los supuestos) que son más o menos robustos frente al incumplimiento de algunos de los tres supuestos en los datos. <br><br>
+
+Supuestos de los análisis paramétricos<br>
+
+- Independencia (los elementos de un grupo no están relacionados con los del otro grupo) <br>  
+- Normalidad (los elementos de una muestra tienen distribución normal) <br>
+- Homocedasticidad (las variaciones de los grupos son iguales) <br>
+
+Debido a los supuestos de los análisis paramétricosprímero debemos analizar la distribución de nuestras variables y su homocedasticidad.<br>
+
+### Análisis de Normalidad 
+
+#### Shapiro-Wilk (SW) test
+
+Interpretación<br>
+
+p-value > alfa: No rechazar H0 (normal) <br>
+p-value < alfa: Rechazar H0 (no normal) <br>
+
+alfa hipotético 5% (0,05)<br><br>
+
+```{r}
+shapiro.test(...)
+```
+```{r}
+ggdensity(data=..., x = "...", fill = "lightgreen") + 
+  stat_overlay_normal_density(color = "darkblue", linetype = "dashed")
+```
+
+```{r}
+shapiro.test(...)
+```
+
+```{r}
+ggdensity(data=..., x = "...", fill = "lightgreen") + 
+  stat_overlay_normal_density(color = "darkblue", linetype = "dashed")
+```
+
+```{r}
+shapiro.test(...)
+```
+
+```{r}
+ggdensity(data=..., x = "...", fill = "lightgreen") + 
+  stat_overlay_normal_density(color = "darkblue", linetype = "dashed")
+```
+
+Las variables edad (**age**), colesterol (**chol**), y frecuencia cardíaca máxima (**thalachh**) no muestran una distribución normal (p < 0,05). Todos los factores muestran pequeñas desviaciones de la normalidad según las curvas de referencia. <br>
+
+### Análisis de Homocedasticidad 
+
+#### Fligner-Killeen test
+
+Para probar homocedasticidad en k grupos de muestras, donde k puede ser mayor a dos. Más robusto contra las desviaciones de la normalidad o cuando hay problemas relacionados con valores atípicos (outliers). <br>
+
+Interpretación<br>
+
+p-value > alfa: No rechazar H0 (normal) <br>
+p-value < alfa: Rechazar H0 (no normal) <br>
+
+alfa hipotético 5% (0,05)<br><br>
+
+```{r}
+fligner.test(... ~ interaction(...,...), data = ...)
+```
+
+```{r}
+fligner.test(... ~ interaction(...,...), data = ...)
+```
+
+```{r}
+fligner.test(... ~ interaction(...,...), data = ...)
+```
+
+Las variables edad (**age**), colesterol (**chol**), y frecuencia cardíaca máxima (**thalachh**) no muestran una distribución normal (p < 0,05). Sin embargo, la frecuencia cardíaca máxima (**thalachh**) si muestra ser homocedastica (p > 0,05) para las variables agrupadas en por sexo (**sex**) y probabilidad de sufrir problemas cardiacos (**output**). <br>
+
+<br>
+
+Debido a que las variables edad (**age**), colesterol (**chol**) y frecuencia cardíaca máxima (**thalachh**), no cumplen con los supuestos para un análisis con metodos paramétricos, en esas variables utilizaremos un análisis no paramétrico como lo es el test Kruskal-Wallis. Adicionalmente, para la variable de frecuencia cardíaca máxima (**thalachh**), como solo falta al supuesto de normalidad, aplicaremos transformaciones en el factor para poder aplicar un análisis paramétrico como lo es el test de ANOVA. <br>
+
+### Kruskal-Wallis test 
+
+Kruskal-Wallis test es una prueba estadística y no paramétrica que se utiliza para comparar las medias de más de dos grupos. <br>
+
+Interpretación<br>
+
+p-value < alfa: rechazar H0 (hay diferencias) <br>
+p-value > alfa: No Rechazar H0 (no hay diferencias) <br>
+
+alfa hipotético 5% (0,05)<br><br>
+
+```{r}
+ggplot(data = ... %>% filter(... == "..."), 
+       aes(x = ..., 
+           y = ..., 
+           fill = ...)) +
+  geom_boxplot(outlier.shape = NA) +
+  stat_compare_means(label.y = 85) +
+  stat_compare_means(aes(label = ..p.signif..), 
+                     method = "wilcox.test") +  
+  theme_classic() +
+  labs(title = "...",
+       y="...",
+       x=NULL,
+       fill="...")
+```
+
+Para comparar si hay diferencias según el sexo de los pacientes que presentan un mayor riesgo de problemas cardíacos, aplicaremos un filtro al set de datos para seleccionar solo las observaciones de pacientes con mayor riesgo, para eso en el ejemplo anterior aplicamos el comando `heart %>% filter(output == "1")` dentro de la función `ggplot(...)`. <br>
+
+```{r}
+ggplot(data = ..., 
+       aes(x = ..., 
+           y = ..., 
+           fill = ...)) +
+  geom_boxplot(outlier.shape = NA) +
+  stat_compare_means() +
+  stat_compare_means(aes(label = ..p.signif..), 
+                     method = "wilcox.test", 
+                     ref.group = ".all.") +  
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       y="...",
+       x=NULL,
+       fill="...")
+```
+
+```{r}
+ggplot(data = ..., 
+       aes(x = ..., 
+           y = ..., 
+           fill = ...)) +
+  geom_boxplot(outlier.shape = NA) +
+  stat_compare_means() +
+  stat_compare_means(aes(label = ..p.signif..), 
+                     method = "wilcox.test", 
+                     ref.group = ".all.") +
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       y="...",
+       x=NULL,
+       fill="...")
+```
+
+```{r}
+ggplot(data = ..., 
+       aes(x = ..., 
+           y = ..., 
+           fill = ...)) +
+  geom_boxplot(outlier.shape = NA) +
+  stat_compare_means() +
+  stat_compare_means(aes(label = ..p.signif..), 
+                     method = "wilcox.test", 
+                     ref.group = ".all.") +
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       y="...",
+       x=NULL,
+       fill="...")
+```
+
+### ANOVA
+
+ANOVA es una prueba  estadística y paramétrica que se utiliza para comparar las medias de más de dos grupos. <br>
+
+Interpretación<br>
+
+p-value < alfa: rechazar H0 (hay diferencias) <br>
+p-value > alfa: No Rechazar H0 (no hay diferencias) <br>
+
+alfa hipotético 5% (0,05)<br><br>
+
+```{r}
+... <- ... %>% 
+         mutate(... = sqrt(max(...+1)-...))
+
+shapiro.test(...)
+```
+
+```{r}
+ggdensity(data=..., x = "...", fill = "lightgreen") + 
+  stat_overlay_normal_density(color = "darkblue", linetype = "dashed")
+```
+
+Como la variable de frecuencia cardíaca máxima (**thalachh**), después de la transformación muestra una distribución normal (p > 0,05) podemos aplicar es el test paramétrico de ANOVA. <br>
+
+```{r}
+ggplot(data = ..., 
+       aes(x = ..., 
+           y = ..., 
+           fill = ...)) +
+  geom_boxplot(outlier.shape = NA) +
+  stat_compare_means(method = "anova") +
+  stat_compare_means(aes(label = ..p.signif..), 
+                     method = "t.test", 
+                     ref.group = ".all.") +
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       y="...",
+       x=NULL,
+       fill="...")
+```
+
+Como la variable de frecuencia cardíaca máxima (**thalachh**), después de la transformación muestra una distribución normal (p > 0,05) podemos aplicar es el test paramétrico de ANOVA. <br>
+
+# Conclusiones
+
+1. Las mujeres tienen más probabilidades de tener problemas cardíacos que los hombres (según la proporción), y muestran una diferencia significativa en el análisis de varianza entre pacientes de alto riesgo. <br>
+
+1. Las personas de mediana edad (40 a 60 años) tienen una mayor probabilidad de sufrir un ataque cardíaco en ambos sexos.<br>
+
+1. Los pacientes hombres que tienen una probabilidad mayor de sufrir un ataque cardíaco muestran niveles menores de colesterol que los pacientes con menor probabilidad.<br>
+
+1. Las personas (hombres y mujeres) con una frecuencia cardíaca máxima alcanzada > 150 tienen una mayor probabilidad de sufrir un ataque cardíaco.<br>
+
+1. La frecuencia cardíaca máxima y la depresión del ST inducida por el ejercicio se asocian fuertemente en los pacientes que presentan dolor de pecho tipo "angina típica" (positivamente asociados) y "dolor no anginoso" (negativamente asociados) en el grupo de pacientes con una mayor probabilidad de sufrir problemas cardíacos y que muestran angina inducida por ejercicio.<br> 
+
+# Gráfico compuestos con {Patchwork}
+
+```{r fig.height=12, fig.width=9}
+pA <- 
+  ggplot(data = ..., 
+       aes(x = ..., fill = ...)) +
+  geom_bar(position = "fill") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_manual(label = c(...),
+                    values = c(...)) +
+  theme_classic() +
+  labs(title = "...",
+       x=NULL,
+       fill="...")
+
+pB <- 
+  ggplot(data = ... %>% filter(... == "..."), 
+       aes(x = ..., 
+           y = ..., 
+           fill = ...)) +
+  geom_boxplot(outlier.shape = NA) +
+  stat_compare_means(label.y = 85) +
+  stat_compare_means(aes(label = ..p.signif..), 
+                     method = "wilcox.test") +  
+  theme_classic() +
+  labs(title = "...",
+       y="...",
+       x=NULL,
+       fill="...")
+
+# Gráfico compuesto
+pA / pB +
+  plot_annotation(tag_levels = 'A') +
+  plot_layout(guides = "collect")
+```
+
+Para fucionar gráficos lo primero es guardar cada gráfico como un objeto ggplot, para eso colocaremos `pA <-` y `pB <-` antes del comando que nos permite generar un gráfico, de esta forma le diremos a **R** que el primer gráfico se guarde como un objeto llamado pA y el segundo como un objeto llamado pB. Luego llamaremos los objetos pA y pB, asignandole un orden espacial, por ejemplo `pA + pB` asignará un gráfico lado a lado con el otro, si quísieramos que un gráfico estuviera sobre el otro podríamos utilizar la siguiente estructura `pA / pB`. Adicionalmente, sí tuviéramos más objetos gráficos podríamos combinarlos de igual forma, un ejemplo con cuatro gráficos podría ser `pA + pB + pC + pD` (lado a lado en una línea de 4), `(pA + pB) / (pC + pD)` (dos filas de 2 y 2 columnas) o `(pA + pB + pC) / pD` (una filas superior de 3 y 1 figura amplia en la segunda fila). Con la función `plot_annotation(tag_levels = 'A')` le dirémos a la función que adicione una letra a cada gráfico lo que facilita la interpretación de un gráfico compuesto. Finalmente con la función `plot_layout(guides = "collect")` le diremos a la función que agrupe todas las leyendas  en una posición única general (izquierda en el ejemplo). <br>
+
